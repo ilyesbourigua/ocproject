@@ -1,0 +1,12 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "sample-pipeline"
+spec:
+  source:
+    git:
+      uri: "http://localhost:3000/Malek/Web-app-backend.git"
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: jenkinsfile
+

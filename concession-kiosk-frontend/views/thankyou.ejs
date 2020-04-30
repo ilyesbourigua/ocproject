@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> User added - Thank You!</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> New User! - Thank You</h1>
+    <div>
+      <p>
+        You are user number: <% if (userNumber) { %>
+        <%= userNumber %> 
+        <% } %>
+    </p>
+    </div>
+    <div>
+     
+      Your are :  <% if (user) { %>
+      <p>First Name: <%= user.firstname %></p>
+      <p>Last Name: <%= user.lastname %></p>
+      <p>Age: <%= user.age %></p>
+      <p>Email: <%= user.email %></p>
+      <p>Occupation: <%= user.occupation %></p>  
+      <% } %>  
+    </div>
+    <br>
+    <button id="myButton" class="float-left submit-button" > Home </button>
+    <button id="myButton2" class="float-left submit-button" > All users </button>
+
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "/";
+          };
+     
+          document.getElementById("myButton2").onclick = function () {
+              location.href = "allusers.ejs";
+          };
+      </script>
+  
+
+  </body>
+</html>
